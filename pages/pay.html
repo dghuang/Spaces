@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Payment</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.grey-orange.min.css">
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../css/main.css" rel="stylesheet">
+
+</head>
+
+<body>
+	<header class="navbar navbar-fixed-top">
+        <img class="logo" src="../img/logo.jpg">
+    </header>
+
+    <div class="container content">
+    	<div class="row" id="pay">
+    		<div class="col-lg-12">
+	    		<div class="intro-text">
+	                <span class="name">You're about to buy the Mayor sofa</span>
+	            </div>
+	        </div>
+    	</div>
+    	<div id="thanks">
+    		<div class="confirm row">
+    			<div class="col-md-6">
+    				<i class="fa fa-check fa-5x"></i>
+    			</div>
+    			<div>
+    				<div class="intro-text">
+		                <span class="name">You've successfully ordered your item!</span>
+		            </div>
+    			</div>
+    		</div>
+    		<div class="row">
+	    		<div class="col-md-4">
+	    			<a href="./user.html">
+	    				<img class="vignette" src="../img/profile.png" >
+	    			</a>
+	    		</div>
+	    		<div class="col-md-8">
+		    		<div class="intro-text">
+		                <span class="name">A message from Igor</span>
+		                <span class="description">
+		                    <p style="font-size: 22px">Your Mayor sofa is on its way! I personally spent over 6 hours handcrafting its every aspect so that it is both visually appealing and extremely comfortable. It's both eye candy and bum candy, so I hope you enjoy it!</p>
+		                </span>
+		            </div>
+		        </div>
+		    </div>
+    	</div>
+        <div class="row">
+       		<div id="couch" class="col-md-8">
+				<img class="img-responsive" src="../img/portfolio/couch1.jpg">
+			</div>
+            <div class="col-md-4" id="buyForm">
+				<form action="#">
+					<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+						<input class="mdl-textfield__input" type="text" style="font-size: 25px" value="Excellent">
+						<label class="mdl-textfield__label">First Name</label>
+					</div>
+					<br>
+					<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+						<input class="mdl-textfield__input" type="text" style="font-size: 25px" value="Taste">
+						<label class="mdl-textfield__label">Last Name</label>
+					</div>
+					<br>
+					<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+						<input class="mdl-textfield__input" type="text" style="font-size: 25px" value="12 Abc Crescent">
+						<label class="mdl-textfield__label">Shipping Address</label>
+					</div>
+					<br>
+					<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+						<input class="mdl-textfield__input" type="text" style="font-size: 25px" value="Ontario">
+						<label class="mdl-textfield__label">Province</label>
+					</div>
+					<br>
+					<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+						<input class="mdl-textfield__input" type="text" style="font-size: 25px" value="D4N K4F">
+						<label class="mdl-textfield__label">Postal Code</label>
+					</div>
+					<br>
+					<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+						<input class="mdl-textfield__input" type="text" style="font-size: 25px" value="(123) 456-7890">
+						<label class="mdl-textfield__label">Phone Number</label>
+					</div>
+					<br>
+					<div id="payment-form"></div>
+					<br>
+				</form>
+				<div>
+					<button class="btn btn-default" onclick="purchase()"> Purchase </button>
+				</div>
+				<div>
+					<i class="fa fa-spinner fa-lg" id="spinner" style="display: none"></i>
+				</div>
+			</div>
+        </div>
+        <div id="others" style="display: none; margin-top: 50px">
+	        <div class="row">
+	        	<div class="col-md-12">
+	        		<hr style="margin-left: 10%; margin-right: 10%; margin-top: 0px">
+	        		<div class="intro-text">
+			        	<span class="name">Other items from the set:</span>
+			        </div>
+	        	</div>
+	        </div>
+	        <div class="row portfolio">
+	            <div class="col-sm-6 portfolio-item">
+	                <a href="#dank" class="portfolio-link" data-toggle="modal">
+	                    <div class="caption"></div>
+	                    <img src="../img/portfolio/chair1.jpg" class="img-responsive" alt="">
+	                </a>
+	            </div>
+	            <div class="col-sm-6 portfolio-item">
+	                <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+	                    <div class="caption"></div>
+	                    <img src="../img/portfolio/couch1.jpg" class="img-responsive" alt="">
+	                </a>
+	            </div>
+	            <div class="col-sm-6 portfolio-item">
+	                <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+	                    <div class="caption"></div>
+	                    <img src="../img/portfolio/sofa1.jpg" class="img-responsive" alt="">
+	                </a>
+	            </div>
+	            <div class="col-sm-6 portfolio-item">
+	                <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+	                    <div class="caption"></div>
+	                    <img src="../img/portfolio/table1.jpg" class="img-responsive" alt="">
+	                </a>
+	            </div>
+	        </div>
+	    </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    Copyright &copy; spaces 2016
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    	function purchase() {
+    		document.getElementById('spinner').style.display = 'block';
+    		setTimeout(function() {
+    			document.getElementById('pay').style.display = 'none';
+		    	document.getElementById('thanks').style.display = 'block';
+		    	document.getElementById('buyForm').style.display= 'none';
+		    	document.getElementById('couch').style.display = "none";
+		    	document.getElementById('others').style.display = "block";
+		    	$('html, body').animate({ scrollTop: 0 }, 'fast');
+    		}, 3000);
+    	}
+    </script>
+
+    <script src="https://js.braintreegateway.com/v2/braintree.js"></script>
+	<script>
+	var clientToken = "eyJ2ZXJzaW9uIjoyLCJhdXRob3JpemF0aW9uRmluZ2VycHJpbnQiOiJjYTQ0OGVhYjkzZTkwMDA3ZWExMzJhZTgyOThlOThkOWNhN2NiOTY2OTQ2ZDVmOTQ2MzY2NjUyNDk3ODk2Nzk5fGNyZWF0ZWRfYXQ9MjAxNi0wMS0zMFQxODo1ODoyNS42NzQwNjYzNTgrMDAwMFx1MDAyNm1lcmNoYW50X2lkPTM0OHBrOWNnZjNiZ3l3MmJcdTAwMjZwdWJsaWNfa2V5PTJuMjQ3ZHY4OWJxOXZtcHIiLCJjb25maWdVcmwiOiJodHRwczovL2FwaS5zYW5kYm94LmJyYWludHJlZWdhdGV3YXkuY29tOjQ0My9tZXJjaGFudHMvMzQ4cGs5Y2dmM2JneXcyYi9jbGllbnRfYXBpL3YxL2NvbmZpZ3VyYXRpb24iLCJjaGFsbGVuZ2VzIjpbXSwiZW52aXJvbm1lbnQiOiJzYW5kYm94IiwiY2xpZW50QXBpVXJsIjoiaHR0cHM6Ly9hcGkuc2FuZGJveC5icmFpbnRyZWVnYXRld2F5LmNvbTo0NDMvbWVyY2hhbnRzLzM0OHBrOWNnZjNiZ3l3MmIvY2xpZW50X2FwaSIsImFzc2V0c1VybCI6Imh0dHBzOi8vYXNzZXRzLmJyYWludHJlZWdhdGV3YXkuY29tIiwiYXV0aFVybCI6Imh0dHBzOi8vYXV0aC52ZW5tby5zYW5kYm94LmJyYWludHJlZWdhdGV3YXkuY29tIiwiYW5hbHl0aWNzIjp7InVybCI6Imh0dHBzOi8vY2xpZW50LWFuYWx5dGljcy5zYW5kYm94LmJyYWludHJlZWdhdGV3YXkuY29tIn0sInRocmVlRFNlY3VyZUVuYWJsZWQiOnRydWUsInRocmVlRFNlY3VyZSI6eyJsb29rdXBVcmwiOiJodHRwczovL2FwaS5zYW5kYm94LmJyYWludHJlZWdhdGV3YXkuY29tOjQ0My9tZXJjaGFudHMvMzQ4cGs5Y2dmM2JneXcyYi90aHJlZV9kX3NlY3VyZS9sb29rdXAifSwicGF5cGFsRW5hYmxlZCI6dHJ1ZSwicGF5cGFsIjp7ImRpc3BsYXlOYW1lIjoiQWNtZSBXaWRnZXRzLCBMdGQuIChTYW5kYm94KSIsImNsaWVudElkIjpudWxsLCJwcml2YWN5VXJsIjoiaHR0cDovL2V4YW1wbGUuY29tL3BwIiwidXNlckFncmVlbWVudFVybCI6Imh0dHA6Ly9leGFtcGxlLmNvbS90b3MiLCJiYXNlVXJsIjoiaHR0cHM6Ly9hc3NldHMuYnJhaW50cmVlZ2F0ZXdheS5jb20iLCJhc3NldHNVcmwiOiJodHRwczovL2NoZWNrb3V0LnBheXBhbC5jb20iLCJkaXJlY3RCYXNlVXJsIjpudWxsLCJhbGxvd0h0dHAiOnRydWUsImVudmlyb25tZW50Tm9OZXR3b3JrIjp0cnVlLCJlbnZpcm9ubWVudCI6Im9mZmxpbmUiLCJ1bnZldHRlZE1lcmNoYW50IjpmYWxzZSwiYnJhaW50cmVlQ2xpZW50SWQiOiJtYXN0ZXJjbGllbnQzIiwiYmlsbGluZ0FncmVlbWVudHNFbmFibGVkIjp0cnVlLCJtZXJjaGFudEFjY291bnRJZCI6ImFjbWV3aWRnZXRzbHRkc2FuZGJveCIsImN1cnJlbmN5SXNvQ29kZSI6IlVTRCJ9LCJjb2luYmFzZUVuYWJsZWQiOmZhbHNlLCJtZXJjaGFudElkIjoiMzQ4cGs5Y2dmM2JneXcyYiIsInZlbm1vIjoib2ZmIn0=";
+	braintree.setup(clientToken, "dropin", {
+	  container: "payment-form"
+	});
+	</script>
+
+	<script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
